@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Zombie World!!</title>
+    <script src="https://aframe.io/releases/1.3.0/aframe.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/donmccurdy/aframe-extras@v6.1.1/dist/aframe-extras.min.js"></script>
+    <script src="zombie.js"></script>
+  </head>
+  <body>
+    <a-scene>
+      <a-assets>
+        <a-asset-item
+          src="radiation_environment/scene.gltf"
+          id="radiationEnv"
+        ></a-asset-item>
+        <a-asset-item src="zombie/scene.gltf" id="zombie"></a-asset-item>
+        <a-asset-item
+          src="zombie_bust/scene.gltf"
+          id="zombieBust"
+        ></a-asset-item>
+      </a-assets>
+      <a-entity
+        gltf-model="#radiationEnv"
+        position="-10 0 -12"
+        scale="2 2 2"
+        animation-mixer
+        zombie-fest
+      >
+      </a-entity>
+      <a-entity
+        gltf-model="#zombieBust"
+        position="30 0 -90"
+        scale="2.5 2.5 2.5"
+      ></a-entity>
+    </a-scene>
+  </body>
+</html>
